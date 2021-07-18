@@ -43,9 +43,15 @@ CORE_APPS = (
     "django.contrib.staticfiles",
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+    "rest_framework",
+    "rest_framework.authtoken",
+)
 
-OUR_APPS = ("base",)
+OUR_APPS = (
+    "base",
+    "users",
+)
 
 INSTALLED_APPS = CORE_APPS + OUR_APPS + THIRD_PARTY_APPS
 
@@ -122,3 +128,5 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     "django.contrib.staticfiles.finders.FileSystemFinder",
 )
+
+AUTH_USER_MODEL = "users.user"
